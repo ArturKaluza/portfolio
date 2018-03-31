@@ -3,10 +3,10 @@ const header = document.querySelector('.header');
 const about = document.getElementById('about');
 const nav = document.querySelector('nav');
 
-const navLi = document.querySelectorAll('.nav > li');
-console.log(window.innerHeight);
+const navLi = document.querySelectorAll('.nav > li a');
+console.log(navLi);
 
-// functions
+// Nav functions
 function addSticky(e) {
     if (window.scrollY > about.offsetTop) {
         nav.classList.add('sticky');
@@ -22,11 +22,11 @@ function addSticky(e) {
     }
 }
 
+function resetActive() {
+    navLi.forEach(li => li.classList.remove('active'))
+};
+
 function togleActive(e) {
-    function resetActive() {
-        navLi.forEach(li => li.classList.remove('active'))
-    };
-    
     if (window.innerHeight > window.scrollY) {
         resetActive();
         navLi[0].classList.add('active');
@@ -43,6 +43,39 @@ function togleActive(e) {
 
 }
 
+// Modal
+//modal button element
+const modalBtn = document.getElementById('modal');
+
+// modal element
+const modal = document.querySelector('.modal');
+// modal close button
+const closeBtn = document.querySelector('.closeBtn');
+const modalContent = document.querySelector('.modal-content');
+
+
+
+function openModal() {
+    modal.style.display = 'flex';
+    resetActive();
+    navLi[4].classList.add('active');
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+    resetActive();
+}
+
+function closeModalEle(e){
+    if (e.target == modal) {
+        modal.style.display = 'none';
+        resetActive();
+    }
+}
+
 // events
 window.addEventListener('scroll', addSticky);
 window.addEventListener('scroll', togleActive);
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', closeModalEle);

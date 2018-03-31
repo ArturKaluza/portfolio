@@ -10,40 +10,54 @@
     <title>Portfolio</title>
 </head>
 <body>
+
+<!-- Header -->
+<header class="header" id="header">
 <!-- Navigation -->
     <nav>
         <div class="container">
             <ul class="nav">
-                <li>Home</li>
-                <li>O mnie</li>
-                <li>Umiejętności</li>
-                <li>Projekty</li>
-                <li>Kontakt</li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#skills">Umiejętności</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#modal">Kontakt</a></li>
             </ul>        
         </div>
     </nav>
-<!-- Header -->
-    <header class="header">
-        <div class="container-flex">
-            <div class="slogan ">
-                <h1>Witaj na moim portfolio.</h1>
-                <p>Mam na imię Artur. Jestem poczatkującym junior web deweloperem.</p>
-                <br>
-                <p>W przyszłości chciałbym się zajmować tworzeniem zarówno stron internetowych, aplikacji webowych jak i mobilnych.</p>
+    <div class="container-flex">
+        <div class="slogan ">
+            <h1>Witaj na moim <span class="red">portfolio.</span></h1>
+            <h2>Jestem poczatkującym <span class="red">Web</span> Deweloperem.</h2>
+            <br>
+            <br>
+            <p>Zapraszam do <span class="red">oglądania</span>!</p>
+        </div>
+        <button class="btn"><a href="#about">Zobacz więcej</a></button>
+    </div>
+</header>
+<!-- About -->
+    <div class="info" id="about">
+        <div class="container">
+            <div class="foto section">
+                <img src="image/foto.jpeg" alt="foto">
             </div>
-            <div class="circkle">
-                <p>&rang;</p>
+            <div class="about section">
+                <h2>Kilka słów o mnie</h2>
+                <p>Cześć, mam na imię Artur.</p>
+            </div>
+            <div class="programing section">
+                <h2>Dlaczego programowanie?</h2>
+                <p>Przez całe moje życie "to" programowanie sie przewijało. Począwszy od wczesnych lat szkoły podstawowej, gdzie
+                    uczyłem się tworzyć proste strony internetowe. Przez technikum, gdzie - progrmowałem proste sterowniki Samsunga i 
+                    studia w, których miałem okazje zaprogramować robota przemysłowego, a także poznałem podstawy C++.   
+                </p>
             </div>
         </div>
-    </header>
-<!-- About -->
-    <div class="about" id="about">
-
-
     </div>
 <!-- skills -->
-    <div class="skills">
-        <h2>Stos technologiczny:</h2>
+    <div class="skills" id="skills">
+        <h2>Poznane technologie:</h2>
         <div class="container flex">
             <div class="logo html5">
                 <figure>
@@ -134,11 +148,26 @@
         </div>
     </div>
 <!-- Projects -->
-    <div class="projects">
+    <div class="projects"  id="projects">
 
     </div>
 <!-- Contact -->
-    <div class="modal"></div>
+    <div class="contact">
+        <button id="modal">Kontakt</button>
+    </div>
+
+<!-- modal --> 
+    <div class="modal">
+        <div class="modal-content">
+            <button class="closeBtn">&times;</button>
+            <form action="#">
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="title">
+                <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
