@@ -42,16 +42,25 @@
             <div class="foto section">
                 <img src="image/foto.jpeg" alt="foto">
             </div>
-            <div class="about section">
-                <h2>Kilka słów o mnie</h2>
-                <p>Cześć, mam na imię Artur.</p>
-            </div>
-            <div class="programing section">
-                <h2>Dlaczego programowanie?</h2>
-                <p>Przez całe moje życie "to" programowanie sie przewijało. Począwszy od wczesnych lat szkoły podstawowej, gdzie
-                    uczyłem się tworzyć proste strony internetowe. Przez technikum, gdzie - progrmowałem proste sterowniki Samsunga i 
-                    studia w, których miałem okazje zaprogramować robota przemysłowego, a także poznałem podstawy C++.   
-                </p>
+            <div class="content">
+                <div class="section">
+                    <h2>Kilka słów o mnie</h2>
+                    <p>Cześć, mam na imię Artur. Z wykształcenia jestem Logistykiem. Obecnie chciałbym zmienić branżę. W przysłości chciałbym się zajmować tworzeniem stron 
+                        oraz aplikacji internetowych, a także mobilnych.  
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Dlaczego programowanie?</h2>
+                    <p>Bardzo często "to" programowanie pojawiało się w moim życiu - między innymi pod postacią programowania prostych sterowników oraz robotów przemysłowych w latach edukacji. 
+                        Niezadowolenie z obecnej sytuacji zawodowej sprawiło, iż zaczełem rozwijać te umiejętności. Po kilku miesiącach 
+                        samodzielenj nauki rozpoczołem 6 miesięczny bootcamp progrmaistyczny "Web Dewloper" podczas, którego znacząco rozwinołem 
+                        swoje umiejśtności, poszeżyłem i uporządkowałem wiedzę. Obecnie jestem zafascynowany możliwościami jakie daje javascript.
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Prywatnie</h2>
+                    <p>Lubie czytać książki - głównie fantastyke. Uwielbiam podróże po górach oraz wycieczki rowerowe.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -59,13 +68,16 @@
     <div class="skills" id="skills">
         <h2>Poznane technologie:</h2>
         <div class="container flex">
-            <div class="logo html5">
+            <div class="logo" id="html5">
                 <figure>
                     <svg viewBox="0 0 128 128">
                         <path fill="#E44D26" d="M27.854 116.354l-8.043-90.211h88.378l-8.051 90.197-36.192 10.033z"></path><path fill="#F16529" d="M64 118.704l29.244-8.108 6.881-77.076h-36.125z"></path><path fill="#EBEBEB" d="M64 66.978h-14.641l-1.01-11.331h15.651v-11.064h-27.743l.264 2.969 2.72 30.489h24.759zM64 95.711l-.049.013-12.321-3.328-.788-8.823h-11.107l1.55 17.372 22.664 6.292.051-.015z"></path><path fill="#fff" d="M63.962 66.978v11.063h13.624l-1.284 14.349-12.34 3.331v11.51l22.682-6.286.166-1.87 2.6-29.127.27-2.97h-2.982zM63.962 44.583v11.064h26.725l.221-2.487.505-5.608.265-2.969z"></path>
                     </svg>
                     <figcaption>html 5</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Tworzenie struktury dokumentu zgodnie z obowiązującymi normami.</p>
+                </div>
             </div>   
             <div class="logo css">
                 <figure>
@@ -74,14 +86,20 @@
                         </svg>
                         <figcaption>css 3</figcaption>
                 </figure>
+                <div class="description">
+                        <p>Kaskadowe arkusze stylów. Nadawanie wyglądu dokumentu, dodawanie prostych przejść i animacji.</p>
+                </div>
             </div>
             <div class="logo js">
-                    <figure>
+                <figure>
                         <svg viewBox="0 0 128 128">
                         <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
                         </svg>
                         <figcaption>javascript</figcaption>
-                    </figure>
+                </figure>
+                <div class="description">
+                        <p>Ożywianie stron, dodawanie interakcji i nie tylko.</p>
+                </div>
             </div>
             <div class="logo sass">
                 <figure>
@@ -90,7 +108,10 @@
                     </svg>
                     <figcaption>sass</figcaption>
                 </figure>
-                    </div>
+                <div class="description">
+                    <p>Rozwinięcie CSS o nowe możliwości.</p>
+                </div>
+            </div>
             <div class="logo git">
                 <figure>
                     <svg viewBox="0 0 128 128">
@@ -98,9 +119,10 @@
                     </svg>
                     <figcaption>git</figcaption>
                 </figure>
+                <div class="description">
+                    <p>System kontroli wersji - śledznie zmian tworzonego projektu.</p>
+                </div>
             </div>
-            
-           
             <div class="logo node">
                 <figure>
                     <svg viewBox="0 0 128 128">
@@ -108,6 +130,9 @@
                     </svg>
                     <figcaption>node.js</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Javascript poza przeglądarką.</p>
+                </div>
             </div>
             <div class="logo mongo">
                 <figure>
@@ -116,6 +141,9 @@
                     </svg>
                     <figcaption>mongoDB</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Nierelacyjne bazy danych.</p>
+                </div>
             </div>
             <div class="logo webpack">
                 <figure>
@@ -124,6 +152,9 @@
                     </svg>
                     <figcaption>webpack</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Bundler. Ułatwianie i przyśpieszanie pracy.</p>
+                </div>
             </div>
             <div class="logo react">
                 <figure>
@@ -132,6 +163,9 @@
                     </svg>
                     <figcaption>react.js</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Budowanie warstwy widoku aplikacji.</p>
+                </div>
             </div>
             <div class="logo redux">
                 <figure>
@@ -144,6 +178,9 @@
                     </svg>
                     <figcaption>redux</figcaption>
                 </figure>
+                <div class="description">
+                    <p>Ułatwienie zarządzania stanem aplikacji.</p>
+                </div>
             </div>
         </div>
     </div>

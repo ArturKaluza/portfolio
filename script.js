@@ -4,7 +4,7 @@ const about = document.getElementById('about');
 const nav = document.querySelector('nav');
 
 const navLi = document.querySelectorAll('.nav > li a');
-console.log(navLi);
+
 
 // Nav functions
 function addSticky(e) {
@@ -79,3 +79,27 @@ window.addEventListener('scroll', togleActive);
 modalBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', closeModalEle);
+
+
+/* sklills animation */
+/*
+const html5 = document.getElementById('html5');
+console.log(html5);
+html5.addEventListener('transitionend', () => {
+    html5.innerHTML = `<p>coś tam coś tam</p>`;
+})
+html5.addEventListener('mouseout', () => {
+    html5.innerHTML = `<figure>
+    <svg viewBox="0 0 128 128">
+        <path fill="#E44D26" d="M27.854 116.354l-8.043-90.211h88.378l-8.051 90.197-36.192 10.033z"></path><path fill="#F16529" d="M64 118.704l29.244-8.108 6.881-77.076h-36.125z"></path><path fill="#EBEBEB" d="M64 66.978h-14.641l-1.01-11.331h15.651v-11.064h-27.743l.264 2.969 2.72 30.489h24.759zM64 95.711l-.049.013-12.321-3.328-.788-8.823h-11.107l1.55 17.372 22.664 6.292.051-.015z"></path><path fill="#fff" d="M63.962 66.978v11.063h13.624l-1.284 14.349-12.34 3.331v11.51l22.682-6.286.166-1.87 2.6-29.127.27-2.97h-2.982zM63.962 44.583v11.064h26.725l.221-2.487.505-5.608.265-2.969z"></path>
+    </svg>
+    <figcaption>html 5</figcaption>
+</figure>`;
+})
+*/
+
+/*
+html5.addEventListener('transitionend', () => {
+    ;
+})
+*/

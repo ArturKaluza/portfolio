@@ -7,15 +7,16 @@
 }
 
 :root {
+    /* fonts */
     --main_font: 'Oswald', sans-serif; 
     --sceond_font: 'Roboto', sans-serif;
-
+    /* colors */
     --lightBeige: #DEF6C9;
     --darkGrey: #444E52;
     --grey: #7C8296;
     --lightGrey: #B3BFCA;
     --lightBlue: #CBDADD;
-    --whithe: #E6E7ED;
+    --white: #E6E7ED;
     --red: #801515;
 }
 
@@ -76,7 +77,7 @@ nav .nav {
 header {
     height: 100vh;
     position: relative;
-    background: var(--lightBlue);
+    background: var(--white);
 }
 
 header .container-flex {
@@ -97,11 +98,18 @@ header .slogan {
 header .slogan h1 {
     font-size: 40px;
     font-family: var(--main_font);
+    animation-name: headerH1;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 header .slogan h2 {
     font-size: 28px;
     font-family: var(--sceond_font);
+    animation-name: headerH2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 header .slogan h2 span {
@@ -112,6 +120,9 @@ header .slogan p {
     font-size: 24px;
     font-family: var(--sceond_font);
     font-weight: bold;
+    animation-name: headerP;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
 }
 
 header .slogan p span {
@@ -128,7 +139,7 @@ header .btn a {
     background-position: 100% 0;
     background-size: 300%;
     background-image: linear-gradient(45deg, var(--darkGrey) 50%, var(--lightGrey) 50%);
-    color: var(--darkGrey);
+    color: var(--red);
     font-size: 20px;
     font-family: var(--sceond_font);
     font-weight: bold;
@@ -146,7 +157,7 @@ header .btn a:hover {
 /* About */
 .info {
     height: 100vh;
-    background: deepskyblue;
+    background: var(--white);
 }
 
 .info .container {
@@ -158,25 +169,45 @@ header .btn a:hover {
 }
 
 .info .section {
-    max-width: 400px;
-    height: 600px;
+    max-width: 600px;
     text-align: center;
 }
 
 .info .section h2 {
+    color: var(--red);
+    font-family: var(--main_font);
     font-size: 24px;
-    margin: 40px 0;
+    margin: 30px 0;
+    transition: 0.2s;
+}
+
+.info .section p  {
+    font-family: var(--sceond_font);
+    font-size: 18px;
+}
+
+.info .section:hover > h2 {
+    color: var(--darkGrey);
+    transform: scale(1.1);
 }
 
 .info .foto img{
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 525px;
 }
 
 /* Skills */
 .skills {
-    min-height: 100vh;
-    background: cornflowerblue;
+    min-height: 80vh;
+    background: var(--white);
+    text-align: center;
+}
+
+.skills h2 {
+    font-family: var(--main_font);
+    font-size: 32px;
+    color: var(--red);
+
 }
 
 .skills .flex {
@@ -189,16 +220,31 @@ header .btn a:hover {
     height: 200px;
     text-align: center;
     margin-top: 80px;
+    margin-bottom: 80px;
     margin-right: 40px;
 }
 
+.skills svg {
+    width: 150px;
+    height: 150px;
+}
+
 .skills .logo figcaption {
+    color: var(--red);
     font-size: 30px;
     font-weight: 700;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--main_font);
     margin-top: 15px;
+    margin-bottom: 10px;
     opacity: 0;
-    transition: .3s ease-in;
+    transition: .4s ease-in;
+}
+
+.skills .logo .description {
+    font-family: var(--main_font);
+    color: var(--darkGrey);
+    opacity: 0;
+    transition: 0.4s;
 }
 
 .skills .logo svg {
@@ -209,7 +255,11 @@ header .btn a:hover {
     transform: scale(1.2);
 }
 
-.skills svg:hover + figcaption {
+.skills .logo:hover > figure figcaption {
+    opacity: 1;
+}
+
+.skills figure:hover + .description {
     opacity: 1;
 }
 
@@ -279,6 +329,48 @@ svg .git:hover {
 }
 
 /* Animations */
+    /* header animation */
+@keyframes headerH1 {
+    0% { 
+        transform: translateY(-200px);
+        opacity: 0;
+    } 50% {
+        transform: translateY(-200px);
+        opacity: 0;
+    } 90% {
+        transform: translateY(10px);
+        opacity: 1;
+    } 100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerH2 {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    } 70% {
+        transform: translateX(-200px);
+        opacity: 0;
+    } 95% {
+        transform: translate(15px);
+        opacity: 1;
+    } 100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes headerP {
+    0% {
+        opacity: 0;
+    } 80% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+
 @keyframes modalBackground {
     0% {
         opacity: 0;
