@@ -279,6 +279,26 @@ svg .git:hover {
 }
 
 /* kontakt */
+#modal {
+    padding: 15px 25px;
+    background-position: 100% 0;
+    background-size: 300%;
+    background-image: linear-gradient(45deg, var(--darkGrey) 50%, var(--lightGrey) 50%);
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: var(--sceond_font);
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 8px;
+    transition: .4s ease-in-out;
+}
+
+#modal:hover {
+    background-position: 0 100%;
+    color: var(--lightBeige);   
+}
+
 .modal {
     min-width: 100vw;
     height: 100%;
@@ -296,10 +316,14 @@ svg .git:hover {
 }
 
 .modal-content {
-    max-width: 400px;
+    min-width: 300px;
+    max-width: 600px;
+    background: var(--darkGrey);
     margin: 0 auto;
     border: 2px solid #000;
+    border-radius: 12px;
     box-shadow: 8px 6px 10px #000;
+    text-align: center;
     opacity: 0;
     animation-name: openModal;
     animation-delay: .1s;
@@ -308,9 +332,102 @@ svg .git:hover {
     animation-timing-function: ease-out;
 }
 
+.modal-content .modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-content h3 {
+    margin-left: 100px;
+    color: var(--lightBeige);
+    line-height: 28px;
+    font-family: var(--main_font);
+    font-size: 24px;
+    text-transform: uppercase;
+
+}
+
+.modal-content .modal-header button {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: var(--white);
+    cursor: pointer;
+    background: var(--red);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: .3s;
+}
+
+.modal-content .modal-header button:hover {
+    background: var(--darkGrey);
+}
+
 .modal-content form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.modal-content form input {
+    width: 280px;
+    height: 32px;
+    margin-top: 15px;
+    padding: 3px;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: var(--sceond_font);
+    transition: .3s;
+}
+
+.modal-content form input::placeholder, .modal-content form textarea::placeholder {
+    color: var(--red);
+}
+
+.modal-content form input:focus::placeholder, .modal-content form textarea:focus::placeholder {
+    color: var(--darkGrey);
+} 
+
+.modal-content form input:focus, .modal-content form textarea:focus {
+    background: var(--lightBlue);
+    color: #000;
+}
+
+.modal-content form textarea {
+    max-width: 280px;
+    margin: 15px 0;
+    padding: 3px;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: var(--sceond_font);
+}
+
+.modal-content form button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-position: 100% 0;
+    background-size: 300%;
+    background-image: linear-gradient(45deg, var(--lightBeige) 50%, var(--lightGrey) 50%);
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: var(--sceond_font);
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 8px;
+    transition: .4s ease-in-out;
+}
+
+.modal-content form button:hover {
+    background-position: 0 100%;
+    color: var(--darkGrey);
 }
 
 /* helpers */
@@ -387,14 +504,5 @@ svg .git:hover {
     } 100% {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-@keyframes closeModal {
-    0% {
-        transform: translateY(15px);
-    } 100% {
-        transform: translateY(-100px);
-        opacity: 0;
     }
 }
