@@ -271,12 +271,82 @@ header .btn a:hover {
 /* Projects */
 .projects {
     height: 100vh;
-    background: beige;
+    background: var(--white);
+    text-align: center;
 }
 
-svg .git:hover {
-    fill: white;
+.projects h2 {
+    color: var(--red);
+    font-family: var(--main_font);
+    font-size: 32px;
+    padding: 40px 0;
 }
+
+.projects .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: block;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project .layer {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    color: var(--lightBlue);
+    font-family: var(--sceond_font);
+    font-size: 16px;
+    line-height: 24px;
+    text-align:left;
+    background: rgba(0,0,0,0.7);
+    transform: translateX(-300px);
+    transition: .3s ease-in;
+}
+
+.project:hover > .layer {
+    transform: translateX(0);
+}
+
+.project .layer p {
+    display: block;
+}
+
+.layer .tech {
+    text-align: center;
+}
+
+.layer .tech i {
+    font-size: 30px;
+    margin: 5px 10px 0 0;
+}
+
+.layer .links a {
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.projects .project {
+    background-size: cover;
+}
+
+.projects .kanban {
+    background-image: url(image/kanban_img.jpg);
+}
+
+.projects .psd1 {
+    background-image: url(image/PSD1.jpg);
+}
+
 
 /* kontakt */
 #modal {
