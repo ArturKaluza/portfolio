@@ -305,7 +305,7 @@ header .btn a:hover {
     font-family: var(--sceond_font);
     font-size: 16px;
     line-height: 24px;
-    text-align:left;
+    text-align: center;
     background: rgba(0,0,0,0.7);
     transform: translateX(-300px);
     transition: .3s ease-in;
@@ -319,12 +319,8 @@ header .btn a:hover {
     display: block;
 }
 
-.layer .tech {
-    text-align: center;
-}
-
 .layer .tech i {
-    font-size: 30px;
+    font-size: 40px;
     margin: 5px 10px 0 0;
 }
 
@@ -332,7 +328,7 @@ header .btn a:hover {
     margin: 0 10px 10px 0;
     text-decoration: none;
     color: var(--white);
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .projects .project {
@@ -340,13 +336,20 @@ header .btn a:hover {
 }
 
 .projects .kanban {
-    background-image: url(image/kanban_img.jpg);
+    background-image: url(image/kanban.jpg);
 }
 
 .projects .psd1 {
     background-image: url(image/PSD1.jpg);
 }
 
+.projects .quote {
+    background-image: url(image/quote.jpg);
+}
+
+.projects .github {
+    background-image: url(image/githubSearch.jpg);
+}
 
 /* kontakt */
 #modal {
