@@ -351,6 +351,17 @@ header .btn a:hover {
     background-image: url(image/githubSearch.jpg);
 }
 
+.projects .redux {
+    background-image: url(image/redux.jpg);
+}
+
+.projects .chat {
+    background-image: url(image/chat.jpg);
+}
+
+.projects .stoper {
+    background-image: url(image/stoper.jpg);
+}
 /* kontakt */
 #modal {
     padding: 15px 25px;
