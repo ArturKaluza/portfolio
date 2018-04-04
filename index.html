@@ -323,10 +323,13 @@
                 <h3>Kontakt</h3>
                 <button class="closeBtn">&times;</button>
             </div>
-            <form action="#">
-                <input type="text" placeholder="name">
-                <input type="text" placeholder="title">
-                <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+            <div class="success">
+                <h2>Dziękuje,<br> wkrótce odczytam <br>wiadomość!</h2>
+            </div>
+            <form action="#" id="form">
+                <input type="text" placeholder="name" id="form-name" required>
+                <input type="text" placeholder="title" id="form-title" required>
+                <textarea name="" id="form-message" cols="30" rows="10" placeholder="message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
             <br><hr>
@@ -345,6 +348,7 @@
             <p>Autor: Artur Kałuża</p>
         </div>
     </footer>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

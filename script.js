@@ -73,6 +73,55 @@ function closeModalEle(e){
     }
 }
 
+/* form firebase */
+// Initialize Firebase
+const config = {
+    apiKey: "AIzaSyArxspwTvDHNj6JsvxHmD-C3wKxz7OZwhM",
+    authDomain: "portfolio-14cfe.firebaseapp.com",
+    databaseURL: "https://portfolio-14cfe.firebaseio.com",
+    projectId: "portfolio-14cfe",
+    storageBucket: "portfolio-14cfe.appspot.com",
+    messagingSenderId: "103325106409"
+    };
+  firebase.initializeApp(config);
+
+const messageRef = firebase.database().ref('messages');
+
+const form = document.getElementById('form');
+const formName = document.getElementById('form-name');
+const formTitle = document.getElementById('form-title');
+const formMessage = document.getElementById('form-message');
+const success = document.querySelector('.modal .success');
+
+form.addEventListener('submit', formVal);
+
+function formVal(e) {
+    e.preventDefault();
+    const name = formName.value;
+    const title = formTitle.value;
+    const message = formMessage.value;
+
+    pushMessage(name, title, message);
+
+    success.style.display = 'block';
+    form.style.display = 'none';
+    setTimeout(() => { 
+        success.style.display = 'none';
+        form.style.display = 'flex';
+    }, 8000);
+
+    form.reset();
+}
+
+function pushMessage(name, title, message) {
+    const messageObj = {
+        name: name,
+        title: title,
+        message: message
+    }
+    const newMessage = messageRef.push(messageObj);
+}
+
 // events
 window.addEventListener('scroll', addSticky);
 window.addEventListener('scroll', togleActive);

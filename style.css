@@ -516,6 +516,14 @@ header .btn a:hover {
 
 }
 
+.modal-content .success {
+    display: none;
+    color: var(--lightBeige);
+    font-family: var(--main_font);
+    font-size: 16px;
+    margin: 15px 0;
+}
+
 .modal-content .modal-header button {
     margin-right: 15px;
     width: 30px;
@@ -563,7 +571,7 @@ header .btn a:hover {
 } 
 
 .modal-content form input:focus, .modal-content form textarea:focus {
-    background: var(--lightBlue);
+    background: var(--lightBeige);
     color: #000;
 }
 
