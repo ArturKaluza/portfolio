@@ -33,7 +33,7 @@ body {
 /* Nav */
 nav {
     width: 100%;
-    background: rgba(68, 72, 82, 0.9);
+    background: var(--darkGrey);
     position: absolute;
     z-index: 1;
     transition: 1s ease;    
@@ -75,7 +75,7 @@ nav .nav-icon a:first-of-type {
 
 nav .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     list-style-type: none;
 }
 
@@ -105,7 +105,7 @@ nav .nav {
 
 .nav li a:hover {
     background: var(--grey);
-    color: var(--whithe);
+    color: var(--red);
 }
 
 /* header */ 
@@ -117,7 +117,7 @@ header {
 header .container-flex {
     max-width: 1200px;
     margin: 0 auto;
-    height: calc(100vh - 40px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,7 +126,7 @@ header .container-flex {
 }
 
 header .slogan {
-    width: 800px;
+    max-width: 768px;
 }
 
 header .slogan h1 {
@@ -232,6 +232,7 @@ header .btn a:hover {
 .skills {
     min-height: 80vh;
     text-align: center;
+    margin-top: 60px;
 }
 
 .skills h2 {
@@ -717,5 +718,142 @@ footer .container p {
     } 100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+/* media query */
+@media (max-width: 992px) {
+    /* nav */
+    nav .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav .nav-icon {
+        display: none;
+    }
+
+    nav .nav {
+        width: 100%;
+    }
+
+    .nav li a {
+        font-size: 16px;
+        line-height: 32px;
+        
+    }
+
+    /* about */ 
+    .info .foto {
+        margin-left: 5px;
+    }
+
+    .info .content {
+        padding: 0 15px;
+    }
+
+    .info .content h2 {
+        font-size: 20px;
+    }
+
+    .info .content p {
+        font-size: 16px;
+    }
+
+    /* skills */
+    .skills h2 {
+        font-size: 26px;
+    }
+
+    .skills .logo {
+        margin-top: 60px;
+    }
+
+    .skills .logo figcaption {
+        font-size: 20px;
+        opacity: 1;
+    }
+
+    .skills .logo .description {
+        font-size: 16px;
+        opacity: 1;
+    }
+
+    /* projects */
+    .projects h2 {
+        font-size: 26px;
+    }
+
+    .project .layer {
+        transform: translateY(0);
+    }
+
+    /* contact */
+    .contact h2 {
+        font-size: 26px;
+    }
+
+    .contact #modal {
+        font-size: 20px;
+    }
+
+    /* footer */
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* nav */
+    nav {
+        position: static;
+    }
+
+    nav .nav {
+        flex-direction: column;
+    }
+
+    .nav li {
+        border: none;
+    }
+
+    .nav li a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /* header */
+    header .slogan {
+        margin-left: 8px;
+    }
+
+
+    /* about */
+    .info .container {
+        flex-direction: column;
+    }
+
+    /* projects */ 
+    .projects h2 {
+        font-size: 22px;
+    }
+
+    .projects .project-container h3 {
+        font-size: 18px;
+    }
+
+    /* contact */
+    .contact h2 {
+        font-size: 22px;
+    }
+
+    .contact #modal {
+        font-size: 18px;
+    }
+
+    /* footer */
+    footer .container p {
+        font-family: var(--sceond_font);
+        font-size: 16px;
     }
 }
