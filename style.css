@@ -834,11 +834,19 @@ footer .container p {
     header .slogan {
         margin-left: 8px;
     }
-
-
+    
     /* about */
+    .info {
+        margin-top: 40px;
+    }
+
     .info .container {
         flex-direction: column;
+    }
+
+    /* skills */
+    .skills .logo {
+        margin-right: 0;
     }
 
     /* projects */ 
