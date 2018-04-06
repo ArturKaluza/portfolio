@@ -57,6 +57,7 @@ nav .nav-icon a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 1px solid var(--lightGrey);
     color: var(--lightBeige);
     font-family: var(--main_font);
     font-size: 36px;
@@ -69,8 +70,8 @@ nav .nav-icon a:hover {
     color: var(--blueGit);
 }
 
-nav .nav-icon a:first-of-type {
-    border-right: 1px solid var(--lightGrey);
+nav .nav-icon a:last-of-type {
+    border-right: none;
 }
 
 nav .nav {
