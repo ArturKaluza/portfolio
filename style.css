@@ -767,12 +767,24 @@ footer .container p {
         align-items: center;
     }
 
-    nav .nav-icon {
-        display: none;
+    nav .nav-icon a {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 8px;
+    }
+
+    nav .nav-icon i {
+        font-size: 32px;
+    }
+
+    nav .nav-icon a:hover {
+        color: var(--red);
+        background: var(--grey);
     }
 
     nav .nav {
         width: 100%;
+        border-top: 1px solid var(--lightGrey);
     }
 
     .nav li a {
@@ -845,6 +857,10 @@ footer .container p {
     /* nav */
     nav {
         position: static;
+    }
+
+    nav .nav-icon {
+        display: none;
     }
 
     nav .nav {

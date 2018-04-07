@@ -1,8 +1,11 @@
 // elements
 const header = document.querySelector('.header');
 const about = document.getElementById('about');
-const nav = document.querySelector('nav');
+const skills =document.getElementById('skills');
+const projects = document.getElementById('projects');
+const contact = document.querySelector('.contact');
 
+const nav = document.querySelector('nav');
 const navLi = document.querySelectorAll('.nav > li a');
 
 
@@ -30,17 +33,19 @@ function togleActive(e) {
     if (window.innerHeight > window.scrollY) {
         resetActive();
         navLi[0].classList.add('active');
-    } else if (window.innerHeight < window.scrollY && window.scrollY < 2*window.innerHeight) {
+    } else if (window.scrollY > about.offsetTop && window.scrollY < skills.offsetTop - window.innerHeight * 0.6) {
         resetActive();
         navLi[1].classList.add('active');
-    } else if (window.innerHeight < window.scrollY && window.scrollY < 3*window.innerHeight) {
+    } else if (window.scrollY > skills.offsetTop && window.scrollY < projects.offsetTop) {
         resetActive();
         navLi[2].classList.add('active');
-    } else if (window.innerHeight < window.scrollY && window.scrollY < 4*window.innerHeight) {
+    } else if (window.scrollY > projects.offsetTop && window.scrollY < contact.offsetTop - window.innerHeight * 0.8) {
         resetActive();
         navLi[3].classList.add('active');
+    } else if (window.scrollY > projects.offsetTop) {
+        resetActive();
+        navLi[4].classList.add('active');
     }
-
 }
 
 // Modal
@@ -52,8 +57,6 @@ const modal = document.querySelector('.modal');
 // modal close button
 const closeBtn = document.querySelector('.closeBtn');
 const modalContent = document.querySelector('.modal-content');
-
-
 
 function openModal() {
     modal.style.display = 'flex';
